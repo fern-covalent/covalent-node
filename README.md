@@ -1,21 +1,34 @@
-# {Company} Node Library
+# Covalent Node Library
 
-[![npm shield](https://img.shields.io/npm/v/@fern-api/{company})](https://www.npmjs.com/package/@fern-api/{company})
+[![npm shield](https://img.shields.io/npm/v/@fern-api/covalent)](https://www.npmjs.com/package/@fern-api/covalent)
 
-The {Company} Node.js library provides access to the {Company} API from JavaScript/TypeScript.
+The Covalent Node.js library provides access to the {Company} API from JavaScript/TypeScript.
 
 ## Documentation
 
-API documentation is available at <{docs_url}>.
+API documentation is available [here](https://www.covalenthq.com/docs/api/#/0/0/USD/1).
 
 ## Usage
 
 [![Try it out](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](TODO)
 
 ```typescript
-import { TODO } from "TODO";
+import { CovalentApiClient } from '@fern-api/covalent';
 
-const TODO
+const client = new CovalentApiClient({
+  credentials: {
+    username: 'apiKey',
+    password: '',
+  },
+});
+
+// This will fail in the browser due to CORS
+const response = await client.classA.balances.getTokenBalances(
+  '1',
+  'demo.eth'
+);
+
+console.log('Received response from Covalent', response);
 ```
 
 ## Beta status
