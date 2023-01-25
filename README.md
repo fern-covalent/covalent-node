@@ -2,7 +2,7 @@
 
 [![npm shield](https://img.shields.io/npm/v/@fern-api/covalent)](https://www.npmjs.com/package/@fern-api/covalent)
 
-The Covalent Node.js library provides access to the {Company} API from JavaScript/TypeScript.
+The Covalent Node.js library provides access to the Covalent API from JavaScript/TypeScript.
 
 ## Documentation
 
@@ -10,7 +10,7 @@ API documentation is available [here](https://www.covalenthq.com/docs/api/#/0/0/
 
 ## Usage
 
-[![Try it out](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](TODO)
+[![Try it out](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/typescript-example-using-sdk-built-with-fern-sckaqv?file=package.json,app.ts)
 
 ```typescript
 import { CovalentApiClient } from '@fern-api/covalent';
