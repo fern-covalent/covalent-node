@@ -10,7 +10,7 @@ API documentation is available [here](https://www.covalenthq.com/docs/api/#/0/0/
 
 ## Usage
 
-[![Try it out](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/typescript-example-using-sdk-built-with-fern-sckaqv?file=package.json,app.ts)
+[![Try it out](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/typescript-example-using-sdk-built-with-fern-sckaqv?file=app.ts&view=editor)
 
 ```typescript
 import { CovalentApiClient } from '@fern-api/covalent';
