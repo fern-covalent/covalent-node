@@ -25,7 +25,7 @@ export class Client {
      * Given `chain_id` and wallet `address`, return current token balances along with their spot prices. This endpoint supports a variety of token standards like ERC20, ERC721 and ERC1155. As a special case, network native tokens like ETH on Ethereum are also returned even though it's not a token contract.
      */
     public async getTokenBalances(
-        chainId: string,
+        chainId: number,
         walletAddress: string,
         request?: CovalentApi.classA.TokenBalancesRequest
     ): Promise<CovalentApi.classA.BalanceResponseType> {
@@ -87,7 +87,7 @@ export class Client {
      * Given `chain_id` and wallet `address`, return wallet value for the last 30 days at 24 hour interval timestamps.
      */
     public async getHistoricalPortfolioValue(
-        chainId: string,
+        chainId: number,
         walletAddress: string,
         request?: CovalentApi.classA.HistoricalPortfolioRequest
     ): Promise<CovalentApi.classA.HistoricalPortfolioResponse> {

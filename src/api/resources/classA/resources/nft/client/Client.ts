@@ -26,7 +26,7 @@ export class Client {
      *
      */
     public async getTokenIds(
-        chainId: string,
+        chainId: number,
         contractAddress: string,
         request?: CovalentApi.classA.TokenIdsRequestType
     ): Promise<CovalentApi.classA.TokenIdResponseType> {

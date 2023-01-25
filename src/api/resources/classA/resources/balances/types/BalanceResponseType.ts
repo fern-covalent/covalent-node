@@ -4,6 +4,33 @@
 
 import { CovalentApi } from "@fern-api/covalent";
 
+/**
+ * @example
+ *     {
+ *         address: "0xfc43f5f9dd45258b3aff31bdbe6561d97e8b71de",
+ *         updatedAt: new Date("2023-01-25T04:17:23.493591785Z"),
+ *         nextUpdateAt: new Date("2023-01-25T04:22:23.493592426Z"),
+ *         quoteCurrency: "USD",
+ *         chainId: 1,
+ *         items: [{
+ *                 contractDecimals: 18,
+ *                 contractName: "Frontier Token",
+ *                 contractTickerSymbol: "FRONT",
+ *                 contractAddress: "0xf8c3527cc04340b208c854e985240c02f7b7793f",
+ *                 supportsErc: ["erc20"],
+ *                 logoUrl: "https://logos.covalenthq.com/tokens/1/0xf8c3527cc04340b208c854e985240c02f7b7793f.png",
+ *                 lastTransferredAt: new Date("2022-09-27T15:29:11Z"),
+ *                 nativeToken: false,
+ *                 type: "cryptocurrency",
+ *                 balance: "4843997835959514312853",
+ *                 balance24H: "4843997835959514312853",
+ *                 quoteRate: 0.212,
+ *                 quoteRate24H: 0.21129668,
+ *                 quote: 1026.9275,
+ *                 quote24H: 1023.5206
+ *             }]
+ *     }
+ */
 export interface BalanceResponseType {
     /** The requested wallet address. */
     address: string;
@@ -14,4 +41,5 @@ export interface BalanceResponseType {
     /** The requested fiat currency. */
     quoteCurrency: string;
     items: CovalentApi.classA.WalletBalanceItem[];
+    chainId: number;
 }

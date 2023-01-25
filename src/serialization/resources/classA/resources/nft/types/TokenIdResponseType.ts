@@ -14,13 +14,15 @@ export const TokenIdResponseType: core.serialization.ObjectSchema<
     items: core.serialization.list(
         core.serialization.lazyObject(async () => (await import("../../../../..")).classA.TokenIdResponse)
     ),
-    pagination: core.serialization.lazyObject(async () => (await import("../../../../..")).AppliedPagination),
+    pagination: core.serialization
+        .lazyObject(async () => (await import("../../../../..")).AppliedPagination)
+        .optional(),
 });
 
 export declare namespace TokenIdResponseType {
     interface Raw {
         updated_at: string;
         items: serializers.classA.TokenIdResponse.Raw[];
-        pagination: serializers.AppliedPagination.Raw;
+        pagination?: serializers.AppliedPagination.Raw | null;
     }
 }

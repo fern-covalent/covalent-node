@@ -14,9 +14,12 @@ export const TokenIdResponse: core.serialization.ObjectSchema<
     contractName: core.serialization.property("contract_name", core.serialization.string()),
     contractTickerSymbol: core.serialization.property("contract_ticker_symbol", core.serialization.string()),
     contractAddress: core.serialization.property("contract_address", core.serialization.string()),
-    supportsErc: core.serialization.property("supports_erc", core.serialization.list(core.serialization.string())),
+    supportsErc: core.serialization.property(
+        "supports_erc",
+        core.serialization.list(core.serialization.string()).optional()
+    ),
     logoUrl: core.serialization.property("logo_url", core.serialization.string()),
-    tokenId: core.serialization.property("token_id", core.serialization.number()),
+    tokenId: core.serialization.property("token_id", core.serialization.string()),
 });
 
 export declare namespace TokenIdResponse {
@@ -25,8 +28,8 @@ export declare namespace TokenIdResponse {
         contract_name: string;
         contract_ticker_symbol: string;
         contract_address: string;
-        supports_erc: string[];
+        supports_erc?: string[] | null;
         logo_url: string;
-        token_id: number;
+        token_id: string;
     }
 }

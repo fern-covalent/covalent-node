@@ -19,8 +19,8 @@ export const WalletBalanceItem: core.serialization.ObjectSchema<
     lastTransferredAt: core.serialization.property("last_transferred_at", core.serialization.date()),
     nativeToken: core.serialization.property("native_token", core.serialization.boolean()),
     type: core.serialization.string(),
-    balance: core.serialization.number(),
-    balance24H: core.serialization.property("balance_24h", core.serialization.number()),
+    balance: core.serialization.string(),
+    balance24H: core.serialization.property("balance_24h", core.serialization.string()),
     quoteRate: core.serialization.property("quote_rate", core.serialization.number()),
     quoteRate24H: core.serialization.property("quote_rate_24h", core.serialization.number()),
     quote: core.serialization.number(),
@@ -38,8 +38,8 @@ export declare namespace WalletBalanceItem {
         last_transferred_at: string;
         native_token: boolean;
         type: string;
-        balance: number;
-        balance_24h: number;
+        balance: string;
+        balance_24h: string;
         quote_rate: number;
         quote_rate_24h: number;
         quote: number;

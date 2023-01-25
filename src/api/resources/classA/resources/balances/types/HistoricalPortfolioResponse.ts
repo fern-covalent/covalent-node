@@ -4,6 +4,43 @@
 
 import { CovalentApi } from "@fern-api/covalent";
 
+/**
+ * @example
+ *     {
+ *         address: "0xfc43f5f9dd45258b3aff31bdbe6561d97e8b71de",
+ *         updatedAt: new Date("2023-01-25T02:01:49.099038051Z"),
+ *         nextUpdateAt: new Date("2023-01-25T02:06:49.099038382Z"),
+ *         quoteCurrency: "USD",
+ *         chainId: 1,
+ *         items: [{
+ *                 contractDecimals: 18,
+ *                 contractName: "Frontier Token",
+ *                 contractTickerSymbol: "FRONT",
+ *                 contractAddress: "0xf8c3527cc04340b208c854e985240c02f7b7793f",
+ *                 logoUrl: "https://logos.covalenthq.com/tokens/1/0xf8c3527cc04340b208c854e985240c02f7b7793f.png",
+ *                 holdings: [{
+ *                         timestamp: new Date("2023-01-25T00:00:00Z"),
+ *                         quoteRate: 0.20990574,
+ *                         open: {
+ *                             balance: "4843997835959514312853",
+ *                             quote: 1016.783
+ *                         },
+ *                         high: {
+ *                             balance: "4843997835959514312853",
+ *                             quote: 1016.783
+ *                         },
+ *                         low: {
+ *                             balance: "4843997835959514312853",
+ *                             quote: 1016.783
+ *                         },
+ *                         close: {
+ *                             balance: "4843997835959514312853",
+ *                             quote: 1016.783
+ *                         }
+ *                     }]
+ *             }]
+ *     }
+ */
 export interface HistoricalPortfolioResponse {
     /** The requested wallet address. */
     address: string;
@@ -16,6 +53,6 @@ export interface HistoricalPortfolioResponse {
     /** The requested chain ID. */
     chainId: number;
     /** List of tokens in portfolio */
-    items: unknown[];
-    pagination: CovalentApi.AppliedPagination;
+    items: CovalentApi.classA.Token[];
+    pagination?: CovalentApi.AppliedPagination;
 }

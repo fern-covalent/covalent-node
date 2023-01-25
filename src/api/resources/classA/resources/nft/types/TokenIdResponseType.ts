@@ -4,10 +4,30 @@
 
 import { CovalentApi } from "@fern-api/covalent";
 
+/**
+ * @example
+ *     {
+ *         updatedAt: new Date("2023-01-25T04:24:41.268693068Z"),
+ *         items: [{
+ *                 contractDecimals: 0,
+ *                 contractName: "Meme Ltd.",
+ *                 contractTickerSymbol: "MEMES",
+ *                 contractAddress: "0xe4605d46fd0b3f8329d936a8b258d69276cba264",
+ *                 supportsErc: undefined,
+ *                 logoUrl: "https://logos.covalenthq.com/tokens/0xe4605d46fd0b3f8329d936a8b258d69276cba264.png",
+ *                 tokenId: "1"
+ *             }],
+ *         pagination: {
+ *             hasMore: true,
+ *             pageNumber: 0,
+ *             pageSize: 100
+ *         }
+ *     }
+ */
 export interface TokenIdResponseType {
     /** The updated time in UTC. */
     updatedAt: Date;
     /** List of tokens in portfolio */
     items: CovalentApi.classA.TokenIdResponse[];
-    pagination: CovalentApi.AppliedPagination;
+    pagination?: CovalentApi.AppliedPagination;
 }

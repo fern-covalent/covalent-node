@@ -17,6 +17,7 @@ export const BalanceResponseType: core.serialization.ObjectSchema<
     items: core.serialization.list(
         core.serialization.lazyObject(async () => (await import("../../../../..")).classA.WalletBalanceItem)
     ),
+    chainId: core.serialization.property("chain_id", core.serialization.number()),
 });
 
 export declare namespace BalanceResponseType {
@@ -26,5 +27,6 @@ export declare namespace BalanceResponseType {
         next_update_at: string;
         quote_currency: string;
         items: serializers.classA.WalletBalanceItem.Raw[];
+        chain_id: number;
     }
 }

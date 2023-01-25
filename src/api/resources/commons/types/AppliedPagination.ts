@@ -4,11 +4,11 @@
 
 export interface AppliedPagination {
     /** true if we can paginate to get more data. */
-    hasMore: boolean;
+    hasMore?: boolean;
     /** The specific page being returned. */
-    pageNumber: number;
+    pageNumber?: number;
     /** The number of results per page. */
-    pageSize: number;
+    pageSize?: number;
     /** Total number of entries. */
-    totalCount: number;
+    totalCount?: number;
 }

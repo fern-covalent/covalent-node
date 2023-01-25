@@ -10,17 +10,17 @@ export const AppliedPagination: core.serialization.ObjectSchema<
     serializers.AppliedPagination.Raw,
     CovalentApi.AppliedPagination
 > = core.serialization.object({
-    hasMore: core.serialization.property("has_more", core.serialization.boolean()),
-    pageNumber: core.serialization.property("page_number", core.serialization.number()),
-    pageSize: core.serialization.property("page_size", core.serialization.number()),
-    totalCount: core.serialization.property("total_count", core.serialization.number()),
+    hasMore: core.serialization.property("has_more", core.serialization.boolean().optional()),
+    pageNumber: core.serialization.property("page_number", core.serialization.number().optional()),
+    pageSize: core.serialization.property("page_size", core.serialization.number().optional()),
+    totalCount: core.serialization.property("total_count", core.serialization.number().optional()),
 });
 
 export declare namespace AppliedPagination {
     interface Raw {
-        has_more: boolean;
-        page_number: number;
-        page_size: number;
-        total_count: number;
+        has_more?: boolean | null;
+        page_number?: number | null;
+        page_size?: number | null;
+        total_count?: number | null;
     }
 }

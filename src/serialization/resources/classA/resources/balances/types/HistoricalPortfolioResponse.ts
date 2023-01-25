@@ -15,8 +15,12 @@ export const HistoricalPortfolioResponse: core.serialization.ObjectSchema<
     nextUpdateAt: core.serialization.property("next_update_at", core.serialization.date()),
     quoteCurrency: core.serialization.property("quote_currency", core.serialization.string()),
     chainId: core.serialization.property("chain_id", core.serialization.number()),
-    items: core.serialization.list(core.serialization.unknown()),
-    pagination: core.serialization.lazyObject(async () => (await import("../../../../..")).AppliedPagination),
+    items: core.serialization.list(
+        core.serialization.lazyObject(async () => (await import("../../../../..")).classA.Token)
+    ),
+    pagination: core.serialization
+        .lazyObject(async () => (await import("../../../../..")).AppliedPagination)
+        .optional(),
 });
 
 export declare namespace HistoricalPortfolioResponse {
@@ -26,7 +30,7 @@ export declare namespace HistoricalPortfolioResponse {
         next_update_at: string;
         quote_currency: string;
         chain_id: number;
-        items: unknown[];
-        pagination: serializers.AppliedPagination.Raw;
+        items: serializers.classA.Token.Raw[];
+        pagination?: serializers.AppliedPagination.Raw | null;
     }
 }
